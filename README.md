@@ -1,4 +1,3 @@
-# 👨‍💻 DRK_ST_BUG👾
 <p align="center">
   <a href="https://git.io/typing-svg">
     <img src="https://readme-typing-svg.demolab.com?font=EB+Garamond&weight=800&size=28&duration=4000&pause=1000&random=false&width=435&lines=+:DRK_ST_BUG;WHATSAPP+CRASH+x+BUG+BOT;DEVELOPPER+PAR+𝙎-𝙏𝞢𝞜" alt="Typing SVG" />
@@ -13,13 +12,22 @@
 
 ---
 
-## 🚀 Étapes pour commencer 🚀
+### 🔐 Generate Pair Code For Session
 
-1. **Première étape** : Obtenez votre [CODE DE PAIRAGE](https://drk-ses.onrender.com).
-2. **Ensuite** : Allez dans WhatsApp > Trois points > Appareils connectés.
-3. **Cliquez sur [FORK](https://github.com/DRK-S-TEN/DRK_ST_BUG1/fork)** pour cloner le projet.
-4. **Le bot peut être déployé sur GitHub, Render, Termux, Heroku et Replit.**
-5. **Abonnez-vous à mon canal pour le tutoriel** : [WhatsApp Channel](https://whatsapp.com/channel/0029Vakp0UnICVfe3I2Fe72w).
+#### PAIRING SERVER 1
+<a href="https://drk-session-id.onrender.com/">
+  <img src="https://img.shields.io/badge/Pairing%20Code%20Server%201-green?style=for-the-badge"/>
+</a>
+
+---
+
+### 📢 Deployments
+
+- **Deploy to Render**  
+  <img src="https://img.shields.io/badge/Deploy%20to%20Render-blue?style=for-the-badge&logo=render"/>
+
+- **Deploy to Replit**  
+  <img src="https://img.shields.io/badge/Deploy%20to%20Replit-orange?style=for-the-badge&logo=replit"/>
 
 ---
 
@@ -33,7 +41,7 @@ Je ne suis pas responsable des dégâts que ce bot peut causer. Utilisez ce bot 
   <summary><strong>Afficher plus</strong></summary>
 
 ## 💀 DRK_ST_TECH 🤖
-INSPIRÉ DE VENOM,TOGE ECT...
+INSPIRÉ DE VENOM, TOGE, ETC.
 <video src="https://telegra.ph/file/e78bd6952fd572b9d281a.mp4" controls></video>
 
 ---
@@ -61,28 +69,50 @@ INSPIRÉ DE VENOM,TOGE ECT...
 
 ---
 
-## Déploiement sur...
-- ![Render](https://example.com/logo-render.png) Render
-- ![Termux](https://example.com/logo-termux.png) Termux
-- ![GitHub](https://example.com/logo-github.png) GitHub
+## DEPLOYEMENT SUR GITHUB 
 
----
+```yaml
+name: Node.js CI
 
-## Déploiement Termux
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron: '0 */6 * * *'  # Relance toutes les 6 heures
 
-### Pour Termux/Ssh/Ubuntu
-```bash
-apt update
-apt upgrade
-pkg update && pkg upgrade
-pkg install bash
-pkg install libwebp
-pkg install git -y
-pkg install nodejs -y 
-pkg install ffmpeg -y 
-pkg install wget
-pkg install imagemagick -y
-git clone https://github.com/DRK-S-TEN/DRK_ST_BUG1
-cd ....
-yarn install
-npm start
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Install FFmpeg
+      run: sudo apt-get install -y ffmpeg
+
+    - name: Start application with timeout
+      run: |
+        timeout 21590s npm start  # Limite l'exécution à 5h 59m 50s
+
+    - name: Save state (Optional)
+      run: |
+        ./save_state.sh
+
