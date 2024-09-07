@@ -1,7 +1,7 @@
 {
   "name": "TOGE-MD",
   "description": "whatsapp md bot build with nodejs",
-  "repository": "https://github.com/toge012345/TOGE-MD",
+  "repository": "https://github.com/DRK-S-TEN/DRK_ST_BUG1",
   "logo": "https://telegra.ph/file/e032a107c82cac9702783.jpg",
   "keywords": ["nodejs", "bot", "whatsapp bot", "whatsapp automation", "multi device"],
   "buildpacks": [
