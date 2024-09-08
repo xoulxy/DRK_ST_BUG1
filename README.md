@@ -22,6 +22,10 @@
   <img src="https://img.shields.io/badge/Pairing%20Code%20Server%201-green?style=for-the-badge"/>
 </a>
 
+## PAIRING SERVER 2
+
+<a href='https://replit.com/@stennumber/DRk-SESSIONS-2?s=app' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/PAIRING CODE-2-green?style=for-the-badge&logo=opencv&logoColor=white'/></a>
+
 ---
 
 ### 📢 Deployments
