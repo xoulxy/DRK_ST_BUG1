@@ -18,7 +18,7 @@
 ### 🔐 Generate Pair Code For Session
 
 #### PAIRING SERVER 1
-<a href="https://drk-session-id.onrender.com/">
+<a href="https://drk-tech-1.onrender.com/">
   <img src="https://img.shields.io/badge/Pairing%20Code%20Server%201-green?style=for-the-badge"/>
 </a>
 
